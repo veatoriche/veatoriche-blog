@@ -10,10 +10,10 @@ module.exports = {
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
   },
-  icon: `content/assets/felog.png`, // Add your favicon
+  icon: `content/assets/favicon-32x32.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
-    disqusShortName: 'https-veatoriche-netlify-com-1', // Your disqus-short-name. check disqus.com.
+    disqusShortName: '', // Your disqus-short-name. check disqus.com.
     utterances: 'veatoriche/veatoriche-blog', // Your repository for archive comment
   },
   configs: {
