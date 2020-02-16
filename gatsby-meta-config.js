@@ -1,5 +1,5 @@
 module.exports = {
-  title: `D3v`,
+  title: `D3vlog`,
   description: `My tech blog`,
   author: `Jihwan Kim`,
   introduction: `Warming up`,
