@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://veatoriche.netlify.com/sitemap.xml
