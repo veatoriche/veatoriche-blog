@@ -1,5 +1,5 @@
 ---
-title: Hash
+title: Hash 겉핥기
 date: 2020-12-23 18:12:47
 category: algorithm
 draft: false
@@ -20,6 +20,7 @@ draft: false
 따라서 Hash를 사용할 때에는 저장된 데이터들을 삭제하거나 삽입하는 빈도가 큰 경우에 사용하는 것이 좋다.
 
 ## Hash 사용중 발생할 수 있는 문제들
+
 ### Hash Collision
 Hash를 사용할 때에는 `{Hash Function 결과값 : Value}`를 저장하는 공간인 **Hash Table** 이 필요한데, 이 Table은 크기가 유한하고 Hash Function의 결과값이 동일한 *Hash Collision*이 발생할 가능성이 존재한다.
 
@@ -30,6 +31,7 @@ Hash collision이 Hash table의 최대 크기를 넘게 발생하여 Hash table�
 Hash Table에 저장된 데이터가 연속적으로 몰리는 현상이다.
 
 ## Hash Collision 대처 방법
+
 ### Seperate Chaining (Open Hashing)
 
 ![](./images/2021-01-03-07-20-04.png)
@@ -43,6 +45,7 @@ collision이 일어나면 지정된 규칙에 따라 다음 저장 위치를 결
 Open Addressing에서 다음 저장 위치를 결정하는 방식은 아래와 같다.
 
 **Linear Probing - 선형 조사**
+
 ![](./images/2021-01-03-08-38-40.png)
 
 충돌이 일어난 다음 자리에 저장하는 방법이다. 위의 예시와 같이 Hash Function이 `key % 7` 인 경우, 위와 같은 collision이 발생할 수 있다. 선형 조사 방식은 Hash Function의 결과값 위치에 이미 자료가 저장되어 있을 경우 바로 다음 위치를 조사하며 비어있는 공간을 찾는 방식이다.
@@ -76,10 +79,12 @@ Load factor 라는 개념이 있는데, Hash table에서 얼마나 원소가 차
 일반적으로 load factor가 높아지면 hash table의 효율이 떨어진다. 따라서 미리 임계값을 설정해놓고 load factor가 임계값 이상이 되면 hash table의 크기를 늘리는 것이 좋다.
 
 ### Seperate Chaining에서 검색 시간
+
 - load factor가 `a` 일 때 검색에 실패할 기대값은 a 이다
 - load factor가 `a` 일 때 검색에 성공할 기대값은 1 + a/2 + a/2n 이다.
 
 ### Open Addressing에서 검색 시간
+
 - 기본적인 가정이 필요한데, 검색 순서인 hash function의 결과값(h0(x), h1(x) ... h_m-1(x)) 가 순열을 이루고 모든 값이 발생할 확률이 일정하다고 가정하자.
 - 위와 같은 상황에서 load factor 가 `a` 일 때 검색에 실패하는 횟수의 기대값은 1/(1-a)이다.
 - load factor가 `a` 일 때 검색에 성공하는 횟수의 기대값은 (1/a)log(1/(1-a)) 이다.
