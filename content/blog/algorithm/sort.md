@@ -178,7 +178,7 @@ def quick_sort(array):
   
   return quick_sort([x for x in array if x < array[0]])
         + [x for x in array if x == array[0]]
-        + [x for x in array if x > array[0]]
+        + quick_sort([x for x in array if x > array[0]])
 ```
 
 lambda를 활용하면 위와도 같이 작성할 수 있다.
