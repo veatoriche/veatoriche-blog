@@ -32,7 +32,7 @@ ex) 0번과 1번이 연결되어있다면 adj_matrix[0][1] = 1, adj_matrix[1][0]
 
 위와 같은 차이점이 있으니 주어진 문제의 특성에 따라 다른 자료 구조를 갖추는 것이 좋겠다.
 
-## BFS - Breㅎadth First Search
+## BFS - Breadth First Search
 
 너비 우선 탐색이라고도 하며 현재 노드에 연결된 모든 점들을 탐색하고 이를 반복하는 것이 BFS이다. BFS는 Queue를 통해 구현할 수 있다.BFS는 두 노드 사이의 최단경로, 임의의 경로를 찾을 때 사용할 수 있다.
 
