@@ -1,7 +1,7 @@
 ---
 title: 이분 탐색 겉핥기
 date: 2021-01-07 07:01:34
-category: aws cloud practitioner
+category: algorithm
 draft: false
 ---
 
