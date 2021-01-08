@@ -25,6 +25,8 @@ numbers = [x for x in range(10)]
 
 위의 예시는 0~9의 수를 담은 numbers 배열을 생성하는 예시이다. `not pythonic`한 코드에서는 numbers 리스트를 초기화한 후 `append`를 사용해 수를 집어넣었다. 반면 `pythonic`한 코드에서는 list comprehension을 사용해 배열을 생성했다. 위쪽에서 반복문을 사용한 예시는 여러 언어에서 사용할 수 있는 방법이라 익숙하지만, 아래 코드는 *한줄에 읽힌다*는 느낌을 받을 수 있다.
 
+또한 Python에 내장된 기능을 최대한 활용하면서 코드를 작성하는 것이 더 효율적이라는 결과를 발표한 [프레젠테이션](https://archive.pycon.kr/2018/program/46)이 있다. 
+
 ## Pythonic한 코드를 작성하는 방법
 
 [PEP8](https://pep8.org/)이라는 Python 프로그래머들이 정해놓은 Python의 코드 스타일이 있는데, 이를 준수하며 코드를 작성하면 여러 사람이 읽고 유지보수 하기 쉬운 코드를 작성할 수 있다. 물론 이 규칙을 무조건 준수해야하는 것은 아니지만, 일정 수준 이상의 가독성과 일관성을 유지하는 데에 도움이 된다. `pip` package로 pep8을 설치하면 내 코드가 pep8 규정에 맞는지 확인할 수도 있다.
@@ -37,9 +39,12 @@ $ pip install pep8
 $ pep8 <source code>
 ```
 
-또한 Python에 내장된 기능을 최대한 활용하면서 코드를 작성하는 것이 더 효율적이라는 결과를 발표한 [프레젠테이션](https://archive.pycon.kr/2018/program/46)이 있다. 
+위의 list comprehension처럼 pythonic한 코드를 짜려면 시간이 조금 덜리더라도 [여기](https://python-guide-kr.readthedocs.io/ko/latest/writing/style.html)와 같은 사이트에서 지속적으로 대체 가능한 기능을 알아보며 적용하는 것이 좋을 것이다. 아마 한번에 완벽하게는 되지 않겠지만 꾸준히 알아가다 보면 점점 좋은 코드를 향해 갈 수 있을 것이다.
 
-위처럼 pythonic한 코드를 짜려면 시간이 조금 덜리더라도 [여기](https://python-guide-kr.readthedocs.io/ko/latest/writing/style.html)와 같은 사이트에서 지속적으로 대체 가능한 기능을 알아보며 적용하는 것이 좋을 것이다. 아마 한번에 완벽하게는 되지 않겠지만 꾸준히 알아가다 보면 점점 좋은 코드를 향해 갈 수 있을 것이다.
+## 정리
+**pythonic** 한 코드를 짜려면
+1. PEP8 규정을 준수하는 코드를 작성한다
+2. 기존 코드에서 python의 고유 기능으로 대체 가능한 부분을 대체한다.
 
 ### 참고
 
