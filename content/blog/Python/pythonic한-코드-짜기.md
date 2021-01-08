@@ -1,5 +1,5 @@
 ---
-title: Pythonic한 코드 짜기
+title: Pythonic한 코드 짜기 - 1. 개요
 date: 2021-01-08 09:01:29
 category: Python
 draft: false
@@ -39,7 +39,7 @@ $ pep8 <source code>
 
 또한 Python에 내장된 기능을 최대한 활용하면서 코드를 작성하는 것이 더 효율적이라는 결과를 발표한 [프레젠테이션](https://archive.pycon.kr/2018/program/46)이 있다. 
 
-위처럼 pythonic한 코드를 짜려면 시간이 조금 덜리더라도 [여기](https://python-guide-kr.readthedocs.io/ko/latest/writing/structure.html#dynamic-typing)와 같은 사이트에서 지속적으로 대체 가능한 기능을 알아보며 적용하는 것이 좋을 것이다. 아마 한번에 완벽하게는 되지 않겠지만 꾸준히 알아가다 보면 점점 좋은 코드를 향해 갈 수 있을 것이다.
+위처럼 pythonic한 코드를 짜려면 시간이 조금 덜리더라도 [여기](https://python-guide-kr.readthedocs.io/ko/latest/writing/style.html)와 같은 사이트에서 지속적으로 대체 가능한 기능을 알아보며 적용하는 것이 좋을 것이다. 아마 한번에 완벽하게는 되지 않겠지만 꾸준히 알아가다 보면 점점 좋은 코드를 향해 갈 수 있을 것이다.
 
 ### 참고
 
