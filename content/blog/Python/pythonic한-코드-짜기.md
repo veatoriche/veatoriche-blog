@@ -44,5 +44,7 @@ $ pep8 <source code>
 ### 참고
 
 [파이썬을 여행하는 히치하이커를 위한 안내서](https://python-guide-kr.readthedocs.io/ko/latest/)
+
 [PEP8](https://www.python.org/dev/peps/pep-0008/#string-quotes)
+
 [안주은 님의 PYCON 발표](https://archive.pycon.kr/2018/program/46)
