@@ -29,9 +29,7 @@ def selection_sort(array):
       if array[max_idx] <= array[jj]:
         max_idx = jj
     # 최대값과 마지막 값 바꾸기
-    temp = array[ii]
-    array[ii] = array[max_idx]
-    array[max_idx] = temp
+    array[ii], array[max_idx] = array[max_idx], array[ii]
 ```
 
 **수행 시간**
@@ -52,9 +50,7 @@ def bubble_sort(array):
   for ii in range(len(array) - 1, 1, -1):
     for jj in range(ii - 1):
       if array[jj] >= array[jj + 1]:
-        temp = array[jj + 1]
-        array[jj + 1] = array[jj]
-        array[jj] = temp
+        array[jj + 1], array[jj] = array[jj], array[jj + 1]
 ```
 
 **수행 시간**
@@ -74,10 +70,8 @@ selection sort와 같이 고정된 횟수를 반복한다. worst, average, best 
 def insertion_sort(array):
   for ii in range(1, len(array)):
     for jj in range(ii, 0, -1):
-      if array[jj - 1] >= array[jj]:
-        temp = array[jj]
-        array[jj] = array[jj - 1]
-        array[jj - 1] = temp
+      if array[jj - 1] > array[jj]:
+        array[jj], array[jj - 1] = array[jj - 1], array[jj]
 ```
 코드가 버블소트와 유사하게 나왔는데, 1~4번 과정을 수행하는 중, shift하는 것의 구현을 bubble sort처럼 좌우를 교환하는 방식으로 구현했기 때문인데, 이렇게되면 아주 구체적으로 말하면 삽입 정렬의 조건에는 맞지 않는다. 그 이유는 다음과 같다
 
@@ -92,10 +86,8 @@ def insertion_sort(array):
 def insertion_sort(array):
   for ii in range(1, len(array)):
     for jj in range(ii, 0, -1):
-      if array[jj]<array[jj-1]:
-          temp=array[jj]
-          array[jj]=array[jj-1]
-          array[jj-1]=temp
+      if array[jj - 1] > array[jj]:
+          array[jj], array[jj-1] = array[jj-1], array[jj]
       # break 추가
       else:
           break
@@ -129,8 +121,7 @@ def merge(l, r):
   result = []
   for ii in range(len(l) + len(r)):
     if len(l) == 0 or len(r) == 0:
-      result += r
-      result += l
+      result += r + l
       break
     if l[0] >= r[0]:
       result.append(r[0])
@@ -181,7 +172,7 @@ def quick_sort(array):
         + quick_sort([x for x in array if x > array[0]])
 ```
 
-lambda를 활용하면 위와도 같이 작성할 수 있다.
+list comprehension을 활용하면 위와도 같이 작성할 수 있다.
 
 **수행 시간**
 
