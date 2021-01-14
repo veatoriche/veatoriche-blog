@@ -21,7 +21,7 @@ Celery는 작업을 `task`라는 단위로 다룬다. 이 `task`들을 여러 �
 
 [공식 가이드](https://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html)를 참고하여 celery를 테스트해보기로 했다.
 
-1. 가상환경 설정
+### 1. 가상환경 설정
 
 Tutorial만의 python 환경을 구성하기 위해 virtualenv를 사용해 가상환경을 설정했다.
 
@@ -36,7 +36,7 @@ $ virtualenv --python=3.8.2 .venv
 $ source .venv/bin/activate
 ```
 
-2. Broker 생성하기
+### 2. Broker 생성하기
 
 Celery의 `worker`들이 작업을 할당받기 위해 `Task Queue`를 관리할 Broker를 생성해야 한다. 사용할 수 있는 Broker로는 `RabbitMQ`, `AWS SQS`, `redis` 등이 있는데, 가장 간편하게 docker를 통해 띄울 수 있는 `redis`를 선택했다.
 
@@ -45,7 +45,7 @@ $ docker run -d -p 6379:6379 redis
 ```
 위 명령어를 통해 docker에 redis container를 생성횄다. 이 컨테이너에 접근할 때는 `redis://localhost:6379`를 사용하면 된다.
 
-3. tasks 생성하기
+### 3. tasks 생성하기
 
 task는 `worker`들이 처리할 작업을 의미한다. `worker`들이 할당받을 작업을 정의해 주어야 한다.
 
@@ -62,7 +62,7 @@ def add(x, y):
     return x + y
 ```
 
-4. worker server 시작하기
+### 4. worker server 시작하기
 
 위에서 정의한 app의 task를 처리하는 worker를 시작해야 위의 task가 queue에 들어왔을 때 처리할 수 있다.
 
@@ -71,7 +71,7 @@ def add(x, y):
 $ celery -A tasks worker --loglevel=info
 ```
 
-5. task 호출해 사용하기
+### 5. task 호출해 사용하기
 
 파일을 작성해서 사용할 수도 있지만, tutorial에서는 python3를 직접 실행해 사용했다.
 
@@ -89,7 +89,7 @@ $ python3
 
 결과값은 기본적으로는 사용할 수 없는 상태라서 이 결과값들을 저장하기 위해서는 Celery에 result backend를 사용할 수 있도록 설정해주어야 한다.
 
-6. result backend 설정하기
+### 6. result backend 설정하기
 
 result를 저장할 backend는 여러 옵션을 선택할 수 있지만 tutorial에서는 *rpc*를 지정해 사용한다. 난 docker container를 하나 더만드는게 편했기 때문에 아래와 같이 5001번 포트로 redis container를 새로 만들어 지정해 주었다.
 
